@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ImageCard from "./components/ImageCard";
 import ImageSearch from "./components/ImageSearch";
+import Navbar from "./components/Navbar";
 
 function App() {
   const [images, setImages] = useState([]);
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <>
+      <Navbar />
       <div className="container mx-auto">
         <ImageSearch searchText={(text) => setTerm(text)} />
         {!isLoading && images.length === 0 && (
